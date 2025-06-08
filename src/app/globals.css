@@ -1,0 +1,61 @@
+@import "tailwindcss";
+/* Impor Tailwind CSS */
+@import "tailwindcss";
+/* ================================================================== */
+/* Bagian setting Fonts */
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/fonts/helvetica.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/fonts/coolvetica.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* =================================================================== */
+
+/* Variabel CSS untuk tema */
+@layer base {
+  html, body {
+    @apply overflow-x-hidden;
+  }
+}
+:root {
+  --background: #ffffff;
+  --darkblue: #1c66c9;
+  --font-paragraph: 'Helvetica', helvetica, arial, sans-serif;
+  --font-tittle: 'Coolvetica', helvetica, arial, sans-serif;
+}
+
+/* style dasar body */
+@layer base {
+  body {
+    margin: 0;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-paragraph);
+  }
+}
+
+/* costume warna Tailwind */
+@layer utilities {
+  .font-tittle{
+    font-family: var(--font-tittle);
+  }
+  p{
+    font-family: var(--font-paragraph)
+  }
+  .font-paragraph{
+    font-family: var(--font-paragraph)
+  }
+
+  .bg-gradient-bluecyan{
+    background: #2CA6E9;
+    background: linear-gradient(60deg, rgba(44, 166, 233, 1) 44%, rgba(132, 246, 246, 1) 95%);
+  }
+}
