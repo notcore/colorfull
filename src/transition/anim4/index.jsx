@@ -27,7 +27,7 @@ const Anim4 = () => {
     <div id="exp" className="relative  mt-34 flex justify-center items-center py-10">
       <div className="flex flex-col gap-6 px-5 mx-auto md:mt-20 ">
          <h1 className="bg-gray-100 mx-auto mt-6 font-paragraph rounded-xl px-2 py-1 max-w-[200px]"> 
-            <span className="font-tittle">Exprienct</span> 
+            <span className="font-tittle">Exprience</span> 
             : Perjalanan
         </h1>
       <h1 className="font-tittle mb-27 text-center text-4xl sm:text-5xl lg:text-6xl">
@@ -41,7 +41,7 @@ const Anim4 = () => {
         {timelineData.map((item, index) => (
           <div
             key={index}
-            className="flex max-w-[1000px z-10 hover:bg-gray-50/50 transition rounded-lg p-5 lg:mx-55 flex-col sm:flex-row sm:items-start gap-4"
+            className="flex max-w-[1000px] z-10  hover:backdrop-blur-xl hover:bg-white/40 transition duration-500 rounded-lg p-5 lg:mx-55 flex-col sm:flex-row sm:items-start gap-4"
           >
             <div className={`text-xs max-w-[150px] font-mono px-3 py-1 rounded-full sm:w-28 flex-shrink-0 ${item.color}`}>
               {item.year}

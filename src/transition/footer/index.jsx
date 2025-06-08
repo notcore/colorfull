@@ -2,11 +2,9 @@
 const Footer = () => {
     return(
         <footer className="bg-gradient-bluecyan overflow-hidden relative w-full h-auto p-10">
-        
-        <div className=" hidden w-1 before:content-['.']"></div>
 
-        {/* sesuai janji ya bang kalo dihapus atau diganti blackscreen makasi:)  */}
-        <a className="text-white/80 opacity-70 select-none pointer-events-none text-sm absolute top-1 left-1" href="https://wa.me/6288214821134">developer @hyuma.dev</a>
+        {/* sesuai janji ya bang kalo dihapus atau diganti blackscreen, makasi:)  */}
+        <a className="text-blue-800 opacity-70 bg-white px-2 rounded-full text-sm absolute top-2 left-2" href="https://wa.me/6288214821134">developer @hyuma.dev</a>
 
             <h1 className="font-tittle  text-start text-white text-4xl sm:text-5xl lg:text-6xl">
                 Terima kasih

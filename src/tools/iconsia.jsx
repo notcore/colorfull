@@ -1,6 +1,6 @@
 useEffect(() => {
   const wm = document.createElement("div");
-  wm.innerText = "© by davadev.com";
+  wm.innerText = "hyumadev.com";
   wm.style.position = "fixed";
   wm.style.bottom = "8px";
   wm.style.left = "8px";
