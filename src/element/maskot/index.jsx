@@ -53,7 +53,7 @@ const Maskot = () => {
     if (!isVisible) return null;
 
     return (
-        <a href="https://shopee.com" className={`maskot-container fixed z-30 top-20 left-0 ${animationState}`}>
+        <a href="https://lynk.id/azerodesign" className={`maskot-container fixed z-30 top-20 left-0 ${animationState}`}>
             <img 
                 src={`/items/png/${currentImage}`}
                 alt="Maskot" 
