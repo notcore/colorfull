@@ -65,7 +65,7 @@ const ScrollSection = () => {
   return (
     <div 
       ref={container}
-      className="relative overflow-hidden w-full h-screen flex flex-col items-center justify-center bg-white"
+      className="relative overflow-hidden w-full h-screen flex flex-col items-center justify-center "
     >
      
       <img

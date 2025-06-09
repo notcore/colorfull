@@ -16,7 +16,7 @@ const Footer = () => {
                     src="/items/svg/biru-3d.svg"  
                     className="will-change-transform  absolute top-0 -right-20 z-0 w-[350px] "
                     alt="Orange decoration"
-                  />
+            />
         </footer>
     )
 }

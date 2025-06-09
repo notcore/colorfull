@@ -1,5 +1,7 @@
 "use client";
+import Wtch from "@/app/system";
 import React from 'react';
+
 
 const BentoGrid = () => {
   const gridItems = [
@@ -51,48 +53,6 @@ const BentoGrid = () => {
       size: "wide",
       costume: 'hidden md:block'
     },
-    // {
-    //   id: 7,
-    //   title: "Fitness Tips",
-    //   description: "Workout routines for beginners",
-    //   image: "/items/logo/7.jpeg",
-    //   size: "tall"
-    // },
-    // {
-    //   id: 8,
-    //   title: "Photography",
-    //   description: "Stunning shots from around the world",
-    //   image: "/items/logo/8.jpeg",
-    //   size: "tall"
-    // },
-    // {
-    //   id: 9,
-    //   title: "Book Recommendations",
-    //   description: "Must-read books this year",
-    //   image: "/items/logo/9.jpeg",
-    //   size: "default"
-    // },
-    // {
-    //   id: 10,
-    //   title: "Coffee Brewing",
-    //   description: "Artisanal coffee techniques",
-    //   image: "/items/logo/10.jpeg",
-    //   size: "default"
-    // },
-    // {
-    //   id: 11,
-    //   title: "Mountain Climbing",
-    //   description: "Essential gear and tips",
-    //   image: "/items/logo/11.jpeg",
-    //   size: "big"
-    // },
-    // {
-    //   id: 12,
-    //   title: "Yoga Poses",
-    //   description: "Daily routine for flexibility",
-    //   image: "/items/logo/12.jpeg",
-    //   size: "wide"
-    // },
   ];
 
   const getSizeClasses = (size) => {
