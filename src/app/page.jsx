@@ -7,7 +7,7 @@ import Anim2 from "@/transition/anim2";
 import Anim3 from "@/transition/anim3";
 import Anim4 from "@/transition/anim4";
 import Footer from "@/transition/footer";
-import Maskot from "@/element/maskot";
+import Maskot from "@/components/ui/maskot";
 import { House, FolderDot, Camera, Footprints } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);

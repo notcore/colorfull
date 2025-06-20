@@ -1,7 +1,9 @@
 "use client";
 import React, { useRef, useState } from "react";
 import LiquidGlass from "liquid-glass-react";
-import CardSwap, { Card } from "@/element/Card";
+import CardSwap, { Card } from "@/components/ui/Card";
+import Howto  from "@/components/ui/Howto";
+ 
 
 export default function Business() { 
   return (
@@ -76,9 +78,7 @@ export default function Business() {
               </div> 
             </div>
 
-            <img src="/items/svg/business/orange-atas.svg" className="absolute   sm:hidden -left-20 -top-30"/>
-            {/* <img src="/items/svg/business/blue-atas.svg" className="absolute hidden -right-50 top-10"/> 
-            <img src="/items/svg/business/blue-lengkung.svg" className="absolute hidden -right-50 top-20"/> */}
+            <img src="/items/svg/business/orange-atas.svg" className="absolute   sm:hidden -left-20 -top-30"/>  
             <img src="/items/svg/business/blue-bawah.svg" className="absolute floating-img -right-20 top-140 md:top-150 lg:top-130"/>
 
           
@@ -151,6 +151,29 @@ export default function Business() {
               
                 </div>
                 {/* end */}
+              </div>
+     
+          </div>
+          <div className="flex z-20 justify-center items-center relative min-h-screen bg-white"> 
+              
+              <div className="md:mx-auto">
+               <div id="produk" className="md:mx-auto mt-50 md:ml-[5%] ml-5">
+                <h2 className="text-blue-600 font-tittle">Produk</h2>
+                <div className="flex items-center  gap-2">
+                
+                  <h1 className="  leading-[0.8] sm:flex font-tittle text-5xl">
+                    Bgaimana cara
+                    <span className="flex sm:ml-3">
+                      order
+                      <img src="/items/svg/business/star.svg" className="w-9 h-9 mt-1" />
+                    </span>
+                  </h1> 
+                </div>  
+                <h2 className="text-black mt-6  ">kami menawarkan produk digital jasa design untuk membuat <br className="hidden md:block"/> bisis kamu menjadi lebih hidup</h2>
+              </div>
+                 
+                  <Howto />
+                 
               </div>
      
           </div>

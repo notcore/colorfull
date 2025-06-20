@@ -1,6 +1,6 @@
 "use client";
 import { Phone, Mail } from "lucide-react";
-import BoxReveal from "@/element/BoxReveal";
+import BoxReveal from "@/components/ui/BoxReveal";
 
 
 const Anim2 = () => {

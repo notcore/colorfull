@@ -1,4 +1,4 @@
-import BoxReveal from "@/element/BoxReveal"
+import BoxReveal from "@/components/ui/BoxReveal"
 
 
 const timelineData = [

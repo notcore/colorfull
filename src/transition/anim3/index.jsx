@@ -1,6 +1,6 @@
 "use client";
-import Folder from "@/element/folder"
-import Bento from "@/element/bento"
+import Folder from "@/components/ui/folder"
+import Bento from "@/components/ui/bento"
 import { 
   Clapperboard,
   PencilRuler
