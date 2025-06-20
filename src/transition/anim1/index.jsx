@@ -2,6 +2,7 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useRef, useEffect } from "react";
+import LiquidGlass from "liquid-glass-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -71,7 +72,7 @@ const ScrollSection = () => {
       <img
         ref={orange} 
         src="/items/svg/orange-3d.svg"  
-        className="will-change-transform fixed z-0 w-[150px] top-0 right-0"
+        className="will-change-transform fixed z-0 w-[150px] md:w-[350px] top-0 right-0"
         alt="Orange decoration"
       />
 
@@ -98,7 +99,7 @@ const ScrollSection = () => {
       <img
         ref={blue} 
         src="/items/svg/blue-3d.svg" 
-        className="will-change-transform fixed z-0 w-[130px] left-0 bottom-1"
+        className="will-change-transform fixed z-0 w-[130px] md:w-[250px] md:-bottom-10 left-0 bottom-1"
         alt="Blue decoration"
       />
     </div>

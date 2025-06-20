@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from 'react'
 
+// menu loading
+
 export default function Layout({ children }) {
   const [loading, setLoading] = useState(true)
 

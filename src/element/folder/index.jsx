@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+// icon folder
+
 const darkenColor = (hex, percent) => {
   let color = hex.startsWith("#") ? hex.slice(1) : hex;
   if (color.length === 3) {

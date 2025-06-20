@@ -1,10 +1,11 @@
 "use client";
 import { House, FolderDot, Camera, Footprints } from "lucide-react";
 import { useEffect, useState } from "react";
+import LiquidGlass from "liquid-glass-react";
 
 const Bar = () => {
   const [activeSection, setActiveSection] = useState('#home');
-  
+
   const menu = [
     { 
       id: 0,
@@ -58,31 +59,60 @@ const Bar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  return (
-    <div className="fixed bottom-2 left-0 z-50 right-0 mx-auto bg-gray-50/80 border border-gray-300 w-[300px] h-[60px] rounded-full backdrop-blur-sm">
-      <div className="grid grid-cols-4 h-full items-center justify-center px-4">
-        {menu.map((item) => {
-          const Icon = item.icon; 
-          const isActive = activeSection === item.to;
-          return (
-            <a 
-              key={item.id} 
-              href={item.to}
-              className={`flex justify-center transition-colors duration-300 ${
-                isActive ? item.activeColor : item.inactiveColor
-              }`}
-            >
-              <Icon 
-                width={40} 
-                height={40} 
-                strokeWidth={1.2} 
-                fill={isActive ? "currentColor" : "none"} 
-              />
-            </a>
-          );
-        })}
-      </div>
-    </div>
+  return ( 
+
+<LiquidGlass
+    mode="polar"
+    overLight={false}
+    displacementScale={100}
+    blurAmount={0.2}
+    saturation={140}
+    cornerRadius={20}
+    elasticity={0}
+    aberrationIntensity={2}
+  style={{
+    position: "fixed",
+    bottom: "16px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    width: "300px",
+    height: "60px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 0,
+    stroke:"1px white",
+    zIndex: 50,
+  }}
+>
+  <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", width: "100%" }}>
+    {menu.map((item) => {
+      const Icon = item.icon;
+      const isActive = activeSection === item.to;
+      return (
+        <a
+          key={item.id}
+          href={item.to}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            color: isActive ? item.activeColor : item.inactiveColor,
+            transition: "color 0.3s",
+          }}
+        >
+          <Icon
+            width={30}
+            height={30}
+            strokeWidth={1.5}
+            fill={isActive ? "currentColor" : "none"}
+          />
+        </a>
+      );
+    })}
+  </div>
+</LiquidGlass>
+
   );
 };
 

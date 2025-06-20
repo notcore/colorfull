@@ -35,7 +35,7 @@ const Anim4 = () => {
       </h1>
         <img
         src="/items/svg/orange2-3d.svg"  
-        className="will-change-transform md:top-50 -top-20 absolute -left-60 md:-left-40 z-0 w-[350px] "
+        className="will-change-transform md:top-50 md:hidden -top-20 absolute -left-60 md:-left-40 z-0 w-[350px] "
         alt="Orange decoration"
       />
         {timelineData.map((item, index) => (

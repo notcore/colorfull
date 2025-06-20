@@ -34,10 +34,6 @@ const Anim2 = () => {
             — ini azero seorang desainer dan motion grafis, aku telah memulai perjalanan sebagai desainer selama 1 tahun lebih, 
             memulai karir sebagai desainer sejak kelas 8 smp dan telah melayani lebih dari 1000 client.
           </BoxReveal>
-          {/* <p className="text-start text-sm sm:text-base mb-6">
-             — ini azero seorang desainer dan motion grafis, aku telah memulai perjalanan sebagai desainer selama 1 tahun lebih, 
-             memulai karir sebagai desainer sejak kelas 8 smp dan telah melayani lebih dari 1000 client.
-           </p> */}
           <div className="flex flex-wrap gap-3 my-3 mb-6 justify-start">
             <span className="bg-blue-600 text-white font-paragraph rounded-xl px-3 py-1 text-sm">
               motion

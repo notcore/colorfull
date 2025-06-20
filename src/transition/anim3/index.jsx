@@ -1,17 +1,11 @@
 "use client";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { useRef, useEffect } from "react";
 import Folder from "@/element/folder"
-import {HeroVideoDialog} from "@/element/video";
-import GifSwiper from "@/element/GifSwiper"
 import Bento from "@/element/bento"
 import { 
   Clapperboard,
   PencilRuler
 } from "lucide-react";
 
-// gsap.registerPlugin(ScrollTrigger);
 
 const Anim3 = () => {
   return (

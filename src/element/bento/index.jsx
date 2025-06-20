@@ -1,8 +1,7 @@
 "use client";
-import Wtch from "@/app/system";
 import React from 'react';
 
-
+// ubah bagian sini aja,jangan hapus wide nya
 const BentoGrid = () => {
   const gridItems = [
     {
@@ -54,6 +53,8 @@ const BentoGrid = () => {
       costume: 'hidden md:block'
     },
   ];
+
+// ============================================================================================================================================
 
   const getSizeClasses = (size) => {
     const base = "relative group rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02]";
