@@ -2,13 +2,19 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Anim1 from "@/transition/anim1";
-import Anim2 from "@/transition/anim2";
-import Anim3 from "@/transition/anim3";
-import Anim4 from "@/transition/anim4";
-import Footer from "@/transition/footer";
+import Anim1 from "@/Portofolio/ScrollSection";
+import Anim2 from "@/Portofolio/AboutMe";
+import Anim3 from "@/Portofolio/Project";
+import Anim4 from "@/Portofolio/Exprience";
+import Footer from "@/Portofolio/footer";
 import Maskot from "@/components/ui/maskot";
-import { House, FolderDot, Camera, Footprints } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { House, 
+          FolderDot, 
+          Camera, 
+          Footprints,
+          ShoppingCart 
+        } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,7 +25,8 @@ export default function Home() {
   const notificationRef = useRef(null);
   const timeoutRef = useRef(null);
   const footerRef = useRef(null);
-
+  const router = useRouter();
+  
   const sections = [
     {
       id: "home",
@@ -45,11 +52,16 @@ export default function Home() {
       icon: <FolderDot width={20} height={20} strokeWidth={1.5} className="text-white" />,
       description: "Karya terbaik yang pernah dibuat",
     },
+    {
+      id: "/business",
+      name: "Business",
+      icon: <ShoppingCart width={20} height={20} strokeWidth={1.5} className="text-white" />,
+      description: "Business page",
+    },
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Section detection logic
+    const handleScroll = () => { 
       sections.forEach((section) => {
         const el = document.getElementById(section.id);
         if (!el) return;
@@ -60,9 +72,7 @@ export default function Home() {
             triggerNotification(section);
           }
         }
-      });
-
-      // Bottom bar visibility logic
+      }); 
       if (footerRef.current) {
         const footerRect = footerRef.current.getBoundingClientRect();
         setShowBottomBar(footerRect.top > window.innerHeight);
@@ -97,13 +107,17 @@ export default function Home() {
 
   const currentData = sections.find((s) => s.id === currentSection) || sections[0];
 
-  const scrollTo = (id) => {
+ const scrollTo = (id) => {
+  if (id === "/business") {
+    router.push("/business");
+  } else {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
+  }
+};
+
 
   return (
-    <div className="relative min-h-screen">
-      {/* Notification Panel */}
+    <div className="relative min-h-screen"> 
       {currentData && (
         <div
           ref={notificationRef}
@@ -137,7 +151,7 @@ export default function Home() {
       <div className={`fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[300px] h-[60px] bg-gray-50/80 border border-gray-300 rounded-full backdrop-blur-sm flex items-center justify-center transition-all duration-300 ${
         showBottomBar ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}>
-        <div className="grid grid-cols-4 w-full px-4">
+        <div className="grid grid-cols-5 w-full px-4">
           {sections.map((section) => {
             const Icon = section.icon.type;
             const active = currentSection === section.id;

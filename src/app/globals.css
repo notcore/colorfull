@@ -334,3 +334,22 @@ img {
     @apply bg-background text-foreground;
   }
 }
+
+.blur-gradient {
+  background-color: rgba(255, 255, 255, 0.473);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(8px);
+  mask-image: linear-gradient(to top, black 30%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 30%, transparent 100%);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE */
+  scrollbar-width: none; /* Firefox */
+}
+.scroll-snap-center {
+  scroll-snap-align: center;
+}
